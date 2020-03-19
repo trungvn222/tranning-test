@@ -57,8 +57,15 @@ test("click button increment counter display", () => {
   // find button and click
   const button = findByTestAttr(wrapper, "increment-button");
   button.simulate("click");
-  wrapper.update();
+  // wrapper.update();
   // find display and test value
   const counterDisplay = findByTestAttr(wrapper, "counter-display");
   expect(counterDisplay.text()).toContain(counter + 1);
 });
+
+/**
+ * Sumary
+ * Used Enzyme's shallow() function to render a component
+ * Tested that required DOM elements were rendered using find()
+ * Tested state using Enzyme's setState() and state()
+ */

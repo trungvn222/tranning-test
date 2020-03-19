@@ -46,19 +46,19 @@ test("renders counter display", () => {
 });
 
 test("counter starts at 0", () => {
-  // const wrapper = setup();
-  // const initialCpunterState = wrapper.state("counter");
-  // expect(initialCpunterState).toBe(0);
+  const wrapper = setup();
+  const initialCpunterState = wrapper.state("counter");
+  expect(initialCpunterState).toBe(0);
 });
 
 test("click button increment counter display", () => {
-  // const counter = 7;
-  // const wrapper = setup(null, { counter: counter });
-  // // find button and click
-  // const button = findByTestAttr(wrapper, "increment-button");
-  // button.simulate("click");
-  // wrapper.update();
-  // // find display and test value
-  // const counterDisplay = findByTestAttr(wrapper, "counter-display");
-  // expect(counterDisplay.text()).toContain(counter + 1);
+  const counter = 7;
+  const wrapper = setup(null, { counter: counter });
+  // find button and click
+  const button = findByTestAttr(wrapper, "increment-button");
+  button.simulate("click");
+  wrapper.update();
+  // find display and test value
+  const counterDisplay = findByTestAttr(wrapper, "counter-display");
+  expect(counterDisplay.text()).toContain(counter + 1);
 });

@@ -15,34 +15,34 @@ Enzyme.configure({
  * @param {object} state - Component state specific to this setup
  * @returns {ShallowWrapper}
  */
-// const setup = (props = {}, state = null) => {
-//   const wrapper = shallow(<App {...props} />);
-//   if (state) {
-//     wrapper.setState(state);
-//   }
-//   return wrapper;
-// };
+const setup = (props = {}, state = null) => {
+  const wrapper = shallow(<App {...props} />);
+  if (state) {
+    wrapper.setState(state);
+  }
+  return wrapper;
+};
 
-// const findByTestAttr = (wrapper, val) => {
-//   return wrapper.find(`[data-test="${val}"]`);
-// };
+const findByTestAttr = (wrapper, val) => {
+  return wrapper.find(`[data-test="${val}"]`);
+};
 
 test("renders without errors", () => {
-  // const wrapper = setup();
-  // const appComponent = findByTestAttr(wrapper, "component-app");
-  // expect(appComponent.length).toBe(1);
+  const wrapper = setup();
+  const appComponent = findByTestAttr(wrapper, "component-app");
+  expect(appComponent.length).toBe(1);
 });
 
 test("renders increment button", () => {
-  // const wrapper = setup();
-  // const button = findByTestAttr(wrapper, "increment-button");
-  // expect(button.length).toBe(1);
+  const wrapper = setup();
+  const button = findByTestAttr(wrapper, "increment-button");
+  expect(button.length).toBe(1);
 });
 
 test("renders counter display", () => {
-  // const wrapper = setup();
-  // const counterDisplay = findByTestAttr(wrapper, "counter-display");
-  // expect(counterDisplay.length).toBe(1);
+  const wrapper = setup();
+  const counterDisplay = findByTestAttr(wrapper, "counter-display");
+  expect(counterDisplay.length).toBe(1);
 });
 
 test("counter starts at 0", () => {

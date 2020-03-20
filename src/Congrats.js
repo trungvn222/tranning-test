@@ -1,9 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Congrats extends Component {
-  render() {
-    return <div></div>;
+const Congrats = props => {
+  if (props.success) {
+    return (
+      <div data-test="component-congrats">
+        <span data-test="congrats-message">
+          Congratulations! You guessed the word!
+        </span>
+      </div>
+    );
+  } else {
+    return <div data-test="component-congrats"></div>;
   }
-}
+};
 
 export default Congrats;

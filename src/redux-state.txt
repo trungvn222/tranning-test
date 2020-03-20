@@ -29,3 +29,4 @@ Redux props in Connected Components
     Test state props and action creator props in
         Input
         App
+    Test action creator calls action

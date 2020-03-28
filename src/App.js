@@ -1,27 +1,22 @@
 import React from "react";
 import "./App.css";
 
+import GuessdWords from "./GuessedWords";
+import Congrats from "./Congrats";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      counter: 0
-    };
   }
 
-  handleIncrement = () => {
-    const { counter } = this.state;
-    this.setState({ counter: counter + 1 });
-  };
-
   render() {
-    const { counter } = this.state;
     return (
       <div className="App" data-test="component-app">
-        <h1 data-test="counter-display">the counter is currently {counter}</h1>
-        <button onClick={this.handleIncrement} data-test="increment-button">
-          increment
-        </button>
+        <h1>Jotto</h1>
+        <Congrats success={false} />
+        <GuessdWords
+          guessedWords={[{ guessedWord: "train", letterMatchCount: 3 }]}
+        />
       </div>
     );
   }
